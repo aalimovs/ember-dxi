@@ -1,6 +1,4 @@
 module.exports = {
-  description: ''
-
   // locals: function(options) {
   //   // Return custom template variables here.
   //   return {
@@ -8,7 +6,7 @@ module.exports = {
   //   };
   // }
 
-  // afterInstall: function(options) {
-  //   // Perform extra work here.
-  // }
+   afterInstall: function(options) {
+     return this.addBowerPackageToProject('lodash')
+   }
 };
